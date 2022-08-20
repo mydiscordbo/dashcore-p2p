@@ -6,19 +6,19 @@ var chai = require('chai');
 var should = chai.should();
 var sinon = require('sinon');
 
-var dashcore = require('@dashevo/dashcore-lib');
-var _ = dashcore.deps._;
-var Random = dashcore.crypto.Random;
-var BN = dashcore.crypto.BN;
-var BufferUtil = dashcore.util.buffer;
+var vkaxcore = require('@vkaxevo/vkaxcore-lib');
+var _ = vkaxcore.deps._;
+var Random = vkaxcore.crypto.Random;
+var BN = vkaxcore.crypto.BN;
+var BufferUtil = vkaxcore.util.buffer;
 var p2p = require('../');
 var Peer = p2p.Peer;
 var Pool = p2p.Pool;
-var Networks = dashcore.Networks;
+var Networks = vkaxcore.Networks;
 var Messages = p2p.Messages;
 var Inventory = p2p.Inventory;
-var Block = dashcore.Block;
-var Transaction = dashcore.Transaction;
+var Block = vkaxcore.Block;
+var Transaction = vkaxcore.Transaction;
 
 // config
 var network = process.env.NETWORK === 'testnet' ? Networks.testnet : Networks.livenet;
@@ -26,20 +26,20 @@ var messages = new Messages({
   network: network
 });
 var blockHash = {
-  'livenet': '0000000000010eedb86810ef7ce941fabc7d2be0c0fa2bf8dfcb5b48f573d15b',
+  'livenet': '851fb22ea7d88e7ad5c01ef61b0272ff5a3875c181a897f09a605186ab8032da',
   'testnet': '0000000058cc069d964711cd25083c0a709f4df2b34c8ff9302ce71fe5b45786'
 };
 var stopBlock = {
-  'livenet': '000000000014838031ed3c985716212e048a7e2a6bcd84ad8591587c38f4597a',
+  'livenet': 'dd0258e38575ad1730bbcbc707b399e86e4fe2cefa0bd3510152f39f834ddbd6',
   'testnet': '00000000d0bc4271bcefaa7eb25000e345910ba16b91eb375cd944b68624de9f'
 };
 var txHash = {
-  'livenet': 'c38e4e2e65d669fdc5eba65f7127dda7aa9394c1d51e60f34712d0b6fb8843b0',
+  'livenet': '2bae2a5a0209e3ba6ebd2a8f7743c2fa3a120004b7b8a4a0a0a5868fef334ce8',
   'testnet': '22231e8219a0617a0ded618b5dc713fdf9b0db8ebd5bb3322d3011a703119d3b'
 };
 
-// These tests require a running dashd instance
-describe('Integration with ' + network.name + ' dashd', function() {
+// These tests require a running vkaxd instance
+describe('Integration with ' + network.name + ' vkaxd', function() {
 
   this.timeout(15000);
   var opts = {

@@ -1,7 +1,7 @@
 {
-  "name": "@dashevo/dashcore-p2p",
+  "name": "@vkaxevo/vkaxcore-p2p",
   "version": "1.1.9",
-  "description": "Interface to the dash P2P network for Dashcore",
+  "description": "Interface to the vkax P2P network for Vkaxcore",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -45,14 +45,14 @@
   "keywords": [
     "bitcoin",
     "bitcore",
-    "dashcore"
+    "vkaxcore"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/dashcore-p2p.git"
+    "url": "https://github.com/vkaxevo/vkaxcore-p2p.git"
   },
   "dependencies": {
-    "@dashevo/dashcore-lib": "^0.16.5",
+    "@vkaxevo/vkaxcore-lib": "^0.16.5",
     "bloom-filter": "^0.2.0",
     "mocha": "^5.2.0",
     "node-buffers": "^0.1.1",
